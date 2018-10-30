@@ -7,26 +7,35 @@ public class TestClass {
 
     Object o1;
 
-    A a; a = new A();
+    User user; user = new User();
 
-    A a2 = new A();
-    A a3 = a2;
+    User user2 = new User();
 
-    System.out.println(Integer.toHexString(a2.hashCode()));
-    System.out.println(a2);
-    System.out.println(a3);
+    user2.name = "Super User..";
+    user2.age = 77;
 
-    a2 = new A();
+    User user3 = user2;
 
-    new A();
-    new A();
+        System.out.println("user name: " + user3.name );
+
+     user3.name = "Супер Мэннн";
+        System.out.println("user name: " + user2.name );
+
+    System.out.println(Integer.toHexString(user2.hashCode()));
+    System.out.println(user2);
+    System.out.println(user3);
+
+    user2 = new User();
+
+    new User();
+    new User();
 
         System.out.println("----------------------");
-        System.out.println(a2);
-        System.out.println(a3);
+        System.out.println(user2);
+        System.out.println(user3);
 
 
-    System.out.println(a);
+    System.out.println(user);
 
 
     //------------
